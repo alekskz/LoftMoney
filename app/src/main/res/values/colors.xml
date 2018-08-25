@@ -4,6 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <!-- alekskz 20180824 Add special color for TextView-->
+    <!-- alekskz 20180824 Added special color for TextView-->
     <color name="colorTextView">#FF0000</color>
 </resources>
