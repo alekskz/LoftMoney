@@ -2,8 +2,19 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#0f89da</color>
 
     <!-- alekskz 20180824 Added special color for TextView-->
     <color name="colorTextView">#FF0000</color>
+
+    <!-- alekskz 20180826 Added color background-->
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorTransparent">#00000000</color>
+    
+    <color name="colorLightishBlue">#3574fa</color>
+    <color name="colorAppleGreen">#7ed321</color>
+    <color name="colorBtnEnabled">@color/colorAppleGreen</color>
+    <color name="colorBtnDisabled">#eaeaea</color>
+    
 </resources>
