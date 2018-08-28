@@ -35,12 +35,8 @@ public class AddActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-               if (nameInput.getText().length() > 0 &&
-                       priceInput.getText().length() > 0) {
-                   addBtn.setEnabled(true);
-               } else {
-                   addBtn.setEnabled(false);
-               }
+                addBtn.setEnabled(nameInput.getText().length() > 0 &&
+                        priceInput.getText().length() > 0);
             }
     }
 }
