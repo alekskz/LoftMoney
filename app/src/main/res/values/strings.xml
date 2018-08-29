@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">LoftMoney</string>
+
+    <!-- alekskz 20180826 Add screen -->
+    <string name="add_hint_name">Наименование</string>
+    <string name="add_hint_price">Цена</string>
+    <string name="add_btn">Добавить</string>
+
 </resources>
