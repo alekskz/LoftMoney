@@ -14,7 +14,15 @@
     
     <color name="colorLightishBlue">#3574fa</color>
     <color name="colorAppleGreen">#7ed321</color>
+
+    <!-- alekskz 20180904 Added colors for item -->
+    <color name="colorMediumGray">#666664</color>
+    <color name="colorDarkSkyBlue">#4a90e2</color>
+
+    <!-- alekskz 20180826 Added colors for Btn -->
     <color name="colorBtnEnabled">@color/colorAppleGreen</color>
     <color name="colorBtnDisabled">#eaeaea</color>
+
+    <color name="colorBand">#efefef</color>
     
 </resources>
