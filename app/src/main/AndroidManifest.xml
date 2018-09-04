@@ -12,14 +12,20 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity">
-            <!-- alekkz 20180826 Disabled .MainActivity for debug .AddActivity
+
+            <!--
+            alekkz 20180826 Disabled .MainActivity for debug .AddActivity
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
         <activity android:name=".AddActivity">
+
+        </activity>
+        <activity android:name=".ItemActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
