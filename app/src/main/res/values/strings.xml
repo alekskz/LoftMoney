@@ -1,9 +1,25 @@
 <resources>
     <string name="app_name">LoftMoney</string>
 
-    <!-- alekskz 20180826 Add screen -->
+    <!--20180905-->
+    <string name="incomes">Доходы</string>
+    <string name="expenses">Расходы</string>
+    <string name="balans">Баланс</string>
+
+    <!-- 20180826 Add screen -->
     <string name="add_hint_name">Наименование</string>
     <string name="add_hint_price">Цена</string>
     <string name="add_btn">Добавить</string>
+    
+    <!--20180905 Main screen-->
+    <string name="main_teb_incomens">@string/incomes</string>
+    <string name="main_teb_expenses">@string/expenses</string>
+    <string name="main_teb_balans">@string/balans</string>
+
+    <string-array name="main_tabs">
+        <item>@string/incomes</item>
+        <item>@string/expenses</item>
+        <item>@string/balans</item>
+    </string-array>
 
 </resources>
