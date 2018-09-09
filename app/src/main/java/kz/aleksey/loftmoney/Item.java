@@ -2,6 +2,9 @@ package kz.aleksey.loftmoney;
 
 public class Item {
 
+    public static final String TYPE_EXPENSE = "expense";
+    public static final String TYPE_INCOME = "income";
+
     private String name;
     private String price;
 

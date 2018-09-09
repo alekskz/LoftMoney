@@ -7,18 +7,18 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ItemsFragment extends Fragment {
+
+    private static final String TAG = "ItemsFragment";
 
     private static final String KEY_TYPE = "type";
 
@@ -30,6 +30,7 @@ public class ItemsFragment extends Fragment {
 
 
     public static ItemsFragment newInstance(int type){
+
         ItemsFragment fragment = new ItemsFragment();
 
         Bundle bundle = new Bundle();
@@ -43,12 +44,14 @@ public class ItemsFragment extends Fragment {
 
     private RecyclerView recycler;
     private ItemsAdapter adapter;
+    private  Api api;
 
     private int type;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i(TAG, "onCreate: ");
 
         Bundle args = getArguments();
 
@@ -61,40 +64,39 @@ public class ItemsFragment extends Fragment {
             throw new IllegalStateException("You mast pass valid fragment type!");
         }
 
+        api = ((App) getActivity().getApplication()).getApi();
         adapter = new ItemsAdapter();
-        adapter.setItems(createTestItems());
+        loadItems();
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Log.i(TAG, "onCreateView: ");
         return inflater.inflate(R.layout.fragment_items, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-
+        Log.i(TAG, "onViewCreated: ");
         recycler = view.findViewById(R.id.recycler);
         recycler.setAdapter(adapter);
         recycler.setLayoutManager(new LinearLayoutManager(requireContext()));
     }
 
-    private List<Item> createTestItems() {
+    @Override
+    public void onDestroyView() {
+        Log.i(TAG, "onDestroyView: ");
+        super.onDestroyView();
+    }
 
-        List<Item> items = new ArrayList<>();
-        items.add(new Item("Гвозди х100", "100"));
-        items.add(new Item("Гвозди х120", "130"));
-        items.add(new Item("Саморезы 5х8", "195"));
-        items.add(new Item("Саморезы 6х10", "210"));
-        items.add(new Item("Саморезы 8х12", "250"));
-        items.add(new Item("Доска 10х10", "1500"));
-        items.add(new Item("Доска 10х10", "1500"));
-        items.add(new Item("Доска 10х10", "1500"));
-        items.add(new Item("Доска 10х10", "1500"));
-        items.add(new Item("Доска 10х10", "1500"));
-        items.add(new Item("Доска 10х10", "1500"));
-        items.add(new Item("Доска 10х10", "1500"));
-        items.add(new Item("Доска 10х10", "1500"));
-        return items;
+    @Override
+    public void onDestroy() {
+        Log.i(TAG, "onDestroy: ");
+        super.onDestroy();
+    }
+
+    private void loadItems(){
 
     }
 }
