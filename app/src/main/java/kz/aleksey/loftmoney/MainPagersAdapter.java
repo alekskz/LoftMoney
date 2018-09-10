@@ -27,13 +27,13 @@ public class MainPagersAdapter extends FragmentPagerAdapter {
 
         switch (position) {
             case PAGE_INCOMES:
-                return ItemsFragment.newInstance(ItemsFragment.TYPE_INCOMES);
+                return ItemsFragment.newInstance(Item.TYPE_INCOME);
 
             case PAGE_EXPENSES:
-                return ItemsFragment.newInstance(ItemsFragment.TYPE_EXPENSES);
+                return ItemsFragment.newInstance(Item.TYPE_EXPENSE);
 
             case PAGE_BALANCE:
-                return ItemsFragment.newInstance(ItemsFragment.TYPE_BALANCE);
+                return ItemsFragment.newInstance(Item.TYPE_BALANS);
 
             default:
                 return null;

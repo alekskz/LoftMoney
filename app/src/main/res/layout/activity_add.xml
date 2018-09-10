@@ -9,7 +9,7 @@
 
     <EditText
         android:id="@+id/name"
-        android:hint="@string/add_hint_price"
+        android:hint="Наименование"
         android:textSize="@dimen/textSizeTextEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
 
     <EditText
         android:id="@+id/price"
-        android:hint="@string/add_hint_price"
+        android:hint="Цена"
         android:textSize="@dimen/textSizeTextEdit"
         android:textColor="@color/colorLightishBlue"
         android:layout_width="match_parent"

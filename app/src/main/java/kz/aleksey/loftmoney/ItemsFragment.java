@@ -22,19 +22,14 @@ public class ItemsFragment extends Fragment {
 
     private static final String KEY_TYPE = "type";
 
-    private static final int TYPE_UNKNOWN = -1;
-
-    public static final int TYPE_INCOMES = 1;
-    public static final int TYPE_EXPENSES = 2;
-    public static final int TYPE_BALANCE = 3;
 
 
-    public static ItemsFragment newInstance(int type){
+    public static ItemsFragment newInstance(String type){
 
         ItemsFragment fragment = new ItemsFragment();
 
         Bundle bundle = new Bundle();
-        bundle.putInt(ItemsFragment.KEY_TYPE, type);
+        bundle.putString(ItemsFragment.KEY_TYPE, type);
         fragment.setArguments(bundle);
 
         return fragment;
@@ -46,7 +41,7 @@ public class ItemsFragment extends Fragment {
     private ItemsAdapter adapter;
     private  Api api;
 
-    private int type;
+    private String type;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,15 +49,7 @@ public class ItemsFragment extends Fragment {
         Log.i(TAG, "onCreate: ");
 
         Bundle args = getArguments();
-
-        if (args != null) {
-            type = args.getInt(KEY_TYPE, TYPE_UNKNOWN);
-            if (type == TYPE_UNKNOWN){
-              throw new IllegalStateException("Unknown type!");
-            }
-        } else {
-            throw new IllegalStateException("You mast pass valid fragment type!");
-        }
+        type = args.getString(KEY_TYPE);
 
         api = ((App) getActivity().getApplication()).getApi();
         adapter = new ItemsAdapter();

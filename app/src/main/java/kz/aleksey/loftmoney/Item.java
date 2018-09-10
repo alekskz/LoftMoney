@@ -4,6 +4,7 @@ public class Item {
 
     public static final String TYPE_EXPENSE = "expense";
     public static final String TYPE_INCOME = "income";
+    public static final String TYPE_BALANS = "balans";
 
     private String name;
     private String price;
